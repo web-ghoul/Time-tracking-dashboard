@@ -1,0 +1,465 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(226, 43%, 10%);
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+section.pro .contain {
+    display: grid;
+    justify-content: stretch;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    align-items: center;
+    width: 260px;
+}
+
+section.pro .contain article.head {
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    padding: 30px;
+    padding-bottom: 70px;
+    padding-top: 40px;
+    width: 100%;
+    gap: 30px;
+}
+
+section.pro .contain article.head picture img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+section.pro .contain article.head .text {
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section.pro .contain article.head .text span {
+    color: hsl(236, 100%, 87%);
+    font-weight: 300;
+    font-size: 18px;
+}
+
+section.pro .contain article.head .text h2 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #fff;
+}
+
+section.pro .contain nav {
+    padding: 30px;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section.pro .contain nav ul {
+    display: grid;
+    justify-content: stretch;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    gap: 20px;
+}
+
+section.pro .contain nav ul li {
+    padding: 0;
+    margin: 0;
+    color: hsl(235, 45%, 61%);
+    font-size: 20px;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+section.pro .contain nav ul li:hover,
+section.pro .contain nav ul li.active {
+    color: #fff;
+}
+
+.boxes .contain {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.boxes .contain .box {
+    background-color: hsl(15, 100%, 70%);
+    display: grid;
+    justify-content: stretch;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.boxes .contain .box:nth-child(2) {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.boxes .contain .box:nth-child(3) {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.boxes .contain .box:nth-child(4) {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.boxes .contain .box:nth-child(5) {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.boxes .contain .box:nth-child(6) {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.boxes .contain .box .pic {
+    border-radius: 15px;
+    height: 44px;
+    position: relative;
+    overflow: hidden;
+}
+
+.boxes .contain .box .pic::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -12px;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url('./images/icon-work.svg');
+}
+
+.boxes .contain .box:nth-child(2) .pic::after {
+    background-image: url('./images/icon-play.svg');
+}
+
+.boxes .contain .box:nth-child(3) .pic::after {
+    background-image: url('./images/icon-study.svg');
+}
+
+.boxes .contain .box:nth-child(4) .pic::after {
+    background-image: url('./images/icon-exercise.svg');
+}
+
+.boxes .contain .box:nth-child(5) .pic::after {
+    background-image: url('./images/icon-social.svg');
+}
+
+.boxes .contain .box:nth-child(6) .pic::after {
+    background-image: url('./images/icon-self-care.svg');
+}
+
+.boxes .contain .box .content {
+    padding: 30px;
+    display: grid;
+    justify-content: stretch;
+    align-items: center;
+    gap: 25px;
+    border-radius: 15px;
+    transition: ease-in-out .3s;
+    background-color: hsl(235, 46%, 20%);
+}
+
+.boxes .contain .box .content:hover {
+    background-color: hsl(236, 32%, 31%);
+    cursor: pointer;
+}
+
+.boxes .contain .box .content .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.boxes .contain .box .content .head .cat {
+    font-size: 20px;
+    color: #fff;
+}
+
+.boxes .contain .box .content .head .spans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.boxes .contain .box .content .head .spans span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: hsl(235, 45%, 61%);
+    transition: ease-in-out .3s;
+    padding: 2px;
+}
+
+.boxes .contain .box .content .head .spans:hover span {
+    background-color: #fff;
+}
+
+.boxes .contain .box .content .time {
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.boxes .contain .box .content .time h1 {
+    font-size: 50px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.boxes .contain .box .content .time p {
+    color: hsl(236, 100%, 87%);
+}
+
+@media (max-width:1200px) {
+    main .container {
+        gap: 25px;
+    }
+    section.pro .contain {
+        border-radius: 13px;
+        width: 250px;
+    }
+    section.pro .contain article.head {
+        border-radius: 13px;
+        padding: 25px;
+        padding-bottom: 60px;
+        padding-top: 30px;
+        gap: 25px;
+    }
+    section.pro .contain article.head picture img {
+        width: 75px;
+        height: 75px;
+    }
+    section.pro .contain article.head .text span {
+        font-size: 18px;
+    }
+    section.pro .contain article.head .text h2 {
+        font-size: 35px;
+    }
+    section.pro .contain nav {
+        padding: 25px;
+        border-radius: 0 0 13px 13px;
+    }
+    section.pro .contain nav ul {
+        gap: 20px;
+    }
+    section.pro .contain nav ul li {
+        font-size: 20px;
+    }
+    .boxes .contain {
+        gap: 20px;
+    }
+    .boxes .contain .box {
+        border-radius: 13px;
+    }
+    .boxes .contain .box .pic {
+        border-radius: 13px;
+        height: 40px;
+    }
+    .boxes .contain .box .pic::after {
+        right: -4px;
+        top: -10px;
+        width: 90px;
+        height: 90px;
+    }
+    .boxes .contain .box .content {
+        padding: 25px;
+        gap: 20px;
+        border-radius: 13px;
+    }
+    .boxes .contain .box .content .head {
+        gap: 70px;
+    }
+    .boxes .contain .box .content .head .cat {
+        font-size: 18px;
+    }
+    .boxes .contain .box .content .head .spans {
+        gap: 3px;
+        padding: 5px;
+    }
+    .boxes .contain .box .content .head .spans span {
+        width: 5px;
+        height: 5px;
+        padding: 2px;
+    }
+    .boxes .contain .box .content .time {
+        gap: 10px;
+    }
+    .boxes .contain .box .content .time h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width:992px) {
+    main .container {
+        gap: 20px;
+        display: grid;
+    }
+    section.pro .contain {
+        border-radius: 10px;
+        width: 230px;
+        display: flex;
+        width: 100%;
+    }
+    section.pro .contain article.head {
+        border-radius: 10px;
+        padding: 20px;
+        gap: 30px;
+        display: flex;
+        align-items: center;
+    }
+    section.pro .contain article.head picture img {
+        width: 100px;
+        height: 100px;
+    }
+    section.pro .contain article.head .text span {
+        font-size: 18px;
+    }
+    section.pro .contain article.head .text h2 {
+        font-size: 35px;
+    }
+    section.pro .contain nav {
+        padding: 25px;
+        border-radius: 0 0 10px 10px;
+    }
+    section.pro .contain nav ul {
+        gap: 12px;
+    }
+    section.pro .contain nav ul li {
+        font-size: 18px;
+    }
+    .boxes .contain {
+        gap: 20px;
+    }
+    .boxes .contain .box {
+        border-radius: 10px;
+    }
+    .boxes .contain .box .pic {
+        border-radius: 10px;
+        height: 35px;
+    }
+    .boxes .contain .box .pic::after {
+        right: -3px;
+        top: -8px;
+        width: 80px;
+        height: 80px;
+    }
+    .boxes .contain .box .content {
+        padding: 25px;
+        gap: 20px;
+        border-radius: 10px;
+    }
+    .boxes .contain .box .content .head {
+        gap: 70px;
+    }
+    .boxes .contain .box .content .head .cat {
+        font-size: 16px;
+    }
+    .boxes .contain .box .content .time {
+        gap: 8px;
+    }
+    .boxes .contain .box .content .time h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:768px) {
+    main .container {
+        gap: 18px;
+    }
+    section.pro .contain {
+        border-radius: 8px;
+    }
+    section.pro .contain article.head {
+        border-radius: 8px;
+        padding: 18px;
+        gap: 25px;
+    }
+    section.pro .contain article.head picture img {
+        width: 80px;
+        height: 80px;
+    }
+    section.pro .contain article.head .text span {
+        font-size: 15px;
+    }
+    section.pro .contain article.head .text h2 {
+        font-size: 30px;
+    }
+    section.pro .contain nav {
+        padding: 20px;
+        border-radius: 0 0 8px 8px;
+    }
+    section.pro .contain nav ul {
+        gap: 10px;
+    }
+    section.pro .contain nav ul li {
+        font-size: 15px;
+    }
+    .boxes .contain {
+        gap: 18px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .boxes .contain .box {
+        border-radius: 8px;
+    }
+    .boxes .contain .box .pic {
+        border-radius: 8px;
+        height: 30px;
+    }
+    .boxes .contain .box .pic::after {
+        right: -3px;
+        top: -8px;
+        width: 70px;
+        height: 70px;
+    }
+    .boxes .contain .box .content {
+        padding: 20px;
+        gap: 18px;
+        border-radius: 8px;
+    }
+    .boxes .contain .box .content .head .spans span {
+        width: 3px;
+        height: 3px;
+    }
+    .boxes .contain .box .content .head {
+        gap: 50px;
+    }
+    .boxes .contain .box .content .time {
+        gap: 6px;
+    }
+    .boxes .contain .box .content .time h1 {
+        font-size: 35px;
+    }
+}
